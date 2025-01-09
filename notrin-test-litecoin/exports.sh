@@ -1,8 +1,6 @@
 #!/bin/bash
 
-export LITECOIN_RPC_IP="litecoin_1"
 export LITECOIN_RPC_PORT="9332"
-export LITECOIN_API_IP="192.168.1.33"
 
 export LITECOIN_RPC_USER ="testuser"
 export LITECOIN_RPC_PASSWORD ="testpass"
