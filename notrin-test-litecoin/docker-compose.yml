@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  litecoin:
+  litecoin_1:
     image: litecoinproject/litecoin-core:latest
     container_name: litecoin_1
     restart: always
@@ -14,7 +14,7 @@ services:
       default:
         ipv4_address: $APP_LITECOIN_NODE_IP
 
-  litecoin_node_rpc_flesk:
+  litecoin_node_rpc_flesk_1:
     image: notrin7/litecoin_node_rpc_flesk:1.3.3
     container_name: litecoin_node_rpc_flesk_1
     restart: always
@@ -29,7 +29,7 @@ services:
       default:
         ipv4_address: $APP_LITECOIN_FLESK_IP
 
-  litecoin_node_dashboard:
+  litecoin_node_dashboard_1:
     image: notrin7/litecoin_node_dashboard:1.2.0
     container_name: litecoin_node_dashboard_1
     restart: always
