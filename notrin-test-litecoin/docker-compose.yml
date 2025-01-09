@@ -39,3 +39,6 @@ services:
       - API_IP="${APP_LITECOIN_FLESK_IP}"
     depends_on:
       - litecoin_node_rpc_flesk
+    networks:
+      default:
+        ipv4_address: $APP_LITECOIN_DASHBOARD_IP
