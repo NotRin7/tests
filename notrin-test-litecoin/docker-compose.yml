@@ -3,30 +3,39 @@ version: '3.7'
 services:
   litecoin:
     image: litecoinproject/litecoin-core:latest
-    container_name: litecoin
+    container_name: litecoin_1
     restart: always
     ports:
-      - "9332:9332"
-      - "9333:9333"
+      - "${LITECOIN_RPC_PORT_1}:${LITECOIN_RPC_PORT_1}"
+      - "${LITECOIN_RPC_PORT_2}:${LITECOIN_RPC_PORT_2}"
     volumes:
-      - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin
+      - "${APP_DATA_DIR}/data:/home/litecoin/.litecoin"
+    networks:
+      default:
+        ipv4_address: $APP_LITECOIN_NODE_IP
 
   litecoin_node_rpc_flesk:
-    image: notrin7/litecoin_node_rpc_flesk:1.3.2
-    container_name: litecoin_node_rpc_flesk
+    image: notrin7/litecoin_node_rpc_flesk:1.3.3
+    container_name: litecoin_node_rpc_flesk_1
     restart: always
     ports:
       - "5000:5000"
     environment:
-      - RPC_IP=litecoin
-      - RPC_PORT=9332
+      - RPC_IP="${APP_LITECOIN_NODE_IP}"
+      - RPC_PORT="${LITECOIN_RPC_PORT}"
+      - RPC_USER="${LITECOIN_RPC_USER}"
+      - RPC_PASSWORD="${LITECOIN_RPC_PASSWORD}"
+    networks:
+      default:
+        ipv4_address: $APP_LITECOIN_FLESK_IP
+
   litecoin_node_dashboard:
     image: notrin7/litecoin_node_dashboard:1.2.0
-    container_name: litecoin_node_dashboard
+    container_name: litecoin_node_dashboard_1
     restart: always
     ports:
-      - "10102:80"
+      - "${LITECOIN_DASHBOARD_PORT}:80"
     environment:
-      - API_IP=ip_of_umbrel_server
+      - API_IP="${APP_LITECOIN_FLESK_IP}"
     depends_on:
-      - litecoin_node_rpc_flesk
+      - litecoin_node_rpc_flesk_1
