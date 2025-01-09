@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: $APP_ELECTRUMX_IP
-      APP_PORT: 3007
+      APP_PORT: 3008
 
   app:
     image: ghcr.io/getumbrel/umbrel-electrumx:1.0.0@sha256:2352ce668f722118e248c7b4458a6ea4509e5312e3cf1ee3963ddea35d395c09
