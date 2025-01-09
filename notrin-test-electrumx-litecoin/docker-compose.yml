@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  electrumx:
+    image: lukechilds/electrumx
+    container_name: electrumx-litecoin
+    restart: always
+    environment:
+      DAEMON_URL: "litecoinrpc://testuser:testpass@192.168.1.33:9332"
+      COIN: "Litecoin"
+      NET: "mainnet"
+      RPC_HOST: "0.0.0.0"
+      DB_DIRECTORY: "/data"
+    ports:
+      - "50003:50001"
+      - "50004:50002"
+    volumes:
+      - electrumx-data:/data
+
+volumes:
+  electrumx-data:
