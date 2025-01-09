@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: notrin-test-litepool
+name: Litepool (WIP)
+tagline: 
+icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
+category: Litecoin
+version: "1.0.2"
+port: 10105
+description: >-
+  Litepool lets you explore and monitor the Litecoin mempool,
+  showing unconfirmed transactions in real-time.
+  It allows you to track pending Litecoin transactions,
+  providing full visibility into the network's transaction flow.
+  Perfect for users who want to keep an eye on transaction activity and network health.
+
+developer: Litecoin Foundation
+website: https://litecoinspace.org/
+submitter: NotRin7
+submission:
+repo: https://github.com/litecoin-foundation/ltcspace
+support: 
+gallery:
+  - https://i.ibb.co/M22sWmM/proxy-image-4.jpg
+releaseNotes: >
+  
+dependencies:
+  - notrin-litecoin
+path: ""
+defaultUsername: ""
+defaultPassword: ""
