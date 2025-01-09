@@ -18,10 +18,8 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - RPC_IP="localhost"
+      - RPC_IP=litecoin
       - RPC_PORT=9332
-    network_mode: "host"
-
   litecoin_node_dashboard:
     image: notrin7/litecoin_node_dashboard:1.2.0
     container_name: litecoin_node_dashboard
@@ -29,7 +27,6 @@ services:
     ports:
       - "10102:80"
     environment:
-      - API_IP="localhost"
+      - API_IP=ip_of_umbrel_server
     depends_on:
       - litecoin_node_rpc_flesk
-    network_mode: "host"
