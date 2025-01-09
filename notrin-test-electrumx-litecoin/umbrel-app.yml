@@ -1,9 +1,9 @@
 manifestVersion: 1.1
-id: notrin-test-litecoin-electrumx
+id: notrin-test-electrumx-litecoin
 implements:
   - electrs
 category: litecoin
-name: ElectrumX
+name: ElectrumX LTC
 version: "1.16.0"
 tagline: A lightweight Electrum server
 description: >
@@ -20,7 +20,7 @@ description: >
 developer: Umbrel
 website: https://umbrel.com/
 dependencies:
-  - bitcoin
+  - litecoin
 repo: https://github.com/getumbrel/umbrel-electrumx
 support: https://community.getumbrel.com/c/bitcoin-and-lightning
 port: 1999
