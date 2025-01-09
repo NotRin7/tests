@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: notrin-litecoin
+id: notrin-test-litecoin
 name: Litecoin Node
 tagline: "Run a Litecoin node to validate transactions."
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
