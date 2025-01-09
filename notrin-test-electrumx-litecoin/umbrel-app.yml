@@ -1,36 +1,35 @@
-manifestVersion: 1
-id: notrin-test-electrumx-litecoin
-name: ElectrumX for Litecoin
-tagline: "Run an ElectrumX server to support Litecoin wallets."
-icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
-category: Litecoin
-version: "1.0.0"
-port: 50003
-description: >-
-  ⚠️ Update the IP address in the Docker Compose file,
+manifestVersion: 1.1
+id: notrin-test-litecoin-electrumx
+implements:
+  - electrs
+category: litecoin
+name: ElectrumX
+version: "1.16.0"
+tagline: A lightweight Electrum server
+description: >
+  Run your personal Electrum server and connect your Electrum-compatible wallet,
+  including BitBoxApp, BlueWallet, Electrum Wallet (Android and Desktop), Nunchuk 
+  (Desktop), Phoenix, and Sparrow Wallet to it instead of using a third-party
+  Electrum server.
 
-  located at /home/umbrel/umbrel/app-data/notrin-litecoin-electrumx/docker-compose.yml,
 
-  by replacing ip_of_umbrel_server with the actual IP address of your Umbrel server.
+  Powered by ElectrumX from Thomas Voegtlin.
 
-  After making this change, you will need to restart the ElectrumX server for the changes to take effect.
 
-  Run an ElectrumX server to support Litecoin wallets with fast and lightweight communication.
-
-  This server allows your Electrum-LTC wallets to connect and interact with your Litecoin node.
-
-developer: lukechilds
-website: https://litecoin.org
-submitter: NotRin7
-submission:
-  repo: https://github.com/lukechilds/electrumx
-support: "https://github.com/NotRin7/umbrel-community-app-store/issues"
+  An official app from Umbrel.
+developer: Umbrel
+website: https://umbrel.com/
+dependencies:
+  - bitcoin
+repo: https://github.com/getumbrel/umbrel-electrumx
+support: https://community.getumbrel.com/c/bitcoin-and-lightning
+port: 1999
 gallery:
-  - https://i.ibb.co/T4FL3pQ/Screenshot-2025-01-08-185725.png
-releaseNotes: >
-  - Initial release of ElectrumX for Litecoin.
-  - Allows connection of Electrum-LTC wallets to a self-hosted server.
-dependencies: []
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
-defaultUsername: ""
 defaultPassword: ""
+releaseNotes: ""
+submitter: Umbrel
+submission: https://github.com/getumbrel/umbrel-apps/pull/1813
