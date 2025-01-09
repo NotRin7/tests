@@ -1,10 +1,10 @@
 manifestVersion: 1
-id: notrin-test-litecoin
-name: Litecoin Node NEW
+id: notrin-litecoin
+name: Litecoin Node
 tagline: "Run a Litecoin node to validate transactions."
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
-version: "1.4.0"
+version: "1.3.2.5"
 port: 10102
 description: >-
   ⚠️Update the IP address in the Docker Compose file,

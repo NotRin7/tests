@@ -1,2 +1,2 @@
-id: "notrin-test" # Choose the ID for your app store. This should contain only alphabets ("a to z") and dashes ("-").
+id: "notrin" # Choose the ID for your app store. This should contain only alphabets ("a to z") and dashes ("-").
 name: "NotRin7" # Choose the name of your app store. It will show up in the UI as "<name> App Store".
