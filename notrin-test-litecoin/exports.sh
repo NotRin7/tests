@@ -2,8 +2,8 @@
 
 export LITECOIN_RPC_PORT="9332"
 
-export LITECOIN_RPC_USER ="testuser"
-export LITECOIN_RPC_PASSWORD ="testpass"
+export LITECOIN_RPC_USER="testuser"
+export LITECOIN_RPC_PASSWORD="testpass"
 
 export LITECOIN_RPC_PORT_1="9332"
 export LITECOIN_RPC_PORT_2="9333"
