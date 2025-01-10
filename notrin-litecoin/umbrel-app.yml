@@ -4,10 +4,10 @@ name: Litecoin Node
 tagline: "Run a Litecoin node to validate transactions."
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
-version: "1.3.3"
+version: "1.3.2.7"
 port: 10102
 description: >-
-  ⚠️Update the IP address in the Docker Compose file,
+  ⚠️If not working, update the IP address in the Docker Compose file,
 
   located at /home/umbrel/umbrel/app-data/notrin-litecoin/docker-compose.yml,
 

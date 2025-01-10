@@ -1,37 +1,32 @@
 version: '3.7'
 
 services:
-  server_litecoin:
-    image: getumbrel/umbrel-bitcoin:v0.8.0@sha256:38465d8e3744223201993950954f0644841587d741e66d200d92b68ca719e6c1
-    container_name: server_litecoin
-    depends_on: [litecoin]
-    restart: on-failure
-    volumes:
-      - ${APP_DATA_DIR}/data/app:/data # volume to persist advanced settings json
-      - /home/umbrel/umbrel/app-data/notrin-litecoin/data # volume to persist umbrel-bitcoin.conf and bitcoin.conf
-    environment:
-      PORT: "3005"
-      BITCOIN_HOST: "${LITECOIN_NODE_IP}"
-      RPC_PORT: "${LITECOIN_P2P_PORT}"
-      BITCOIN_RPC_PORT: "${LITECOIN_P2P_PORT}"
-      RPC_USER: "${LITECOIN_RPC_USER}"
-      BITCOIN_RPC_USER: "${LITECOIN_RPC_USER}"
-      RPC_PASSWORD: "${LITECOIN_RPC_PASS}"
-      BITCOIN_RPC_PASSWORD: "${LITECOIN_RPC_PASS}"
-      BITCOIN_P2P_PORT: "${LITECOIN_P2P_PORT}"
-      DEVICE_DOMAIN_NAME: "${DEVICE_DOMAIN_NAME}"
-      BITCOIN_DEFAULT_NETWORK: "${LITECOIN_NODE_NETWORK}"
-      BITCOIND_IP: "${LITECOIN_NODE_IP}"
-    networks:
-      default:
-        ipv4_address: $APP_LITECOIN_IP
-
   litecoin:
     image: litecoinproject/litecoin-core:latest
     container_name: litecoin
     restart: always
     ports:
-      - "${LITECOIN_P2P_PORT}:${LITECOIN_P2P_PORT}"
       - "${LITECOIN_RPC_PORT}:${LITECOIN_RPC_PORT}"
+      - "${LITECOIN_P2P_PORT}:${LITECOIN_P2P_PORT}"
     volumes:
       - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin
+
+  litecoin_node_rpc_flesk:
+    image: notrin7/litecoin_node_rpc_flesk:1.3.2
+    container_name: litecoin_node_rpc_flesk
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - RPC_IP=${LITECOIN_NODE_IP}
+      - RPC_PORT=${LITECOIN_RPC_PORT}
+  litecoin_node_dashboard:
+    image: notrin7/litecoin_node_dashboard:1.2.0
+    container_name: litecoin_node_dashboard
+    restart: always
+    ports:
+      - "10102:80"
+    environment:
+      - API_IP=${LITECOIN_LOCALHOST_IP} #ip_of_umbrel_server can be change here, recomnedet to change in exports.sh (can look like this API_IP=192.168.1.2)
+    depends_on:
+      - litecoin_node_rpc_flesk
