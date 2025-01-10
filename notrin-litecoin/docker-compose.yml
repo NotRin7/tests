@@ -1,20 +1,13 @@
 version: '3.7'
 
 services:
-
-services:
-  app_proxy:
-    environment:
-      APP_HOST: $APP_LITECOIN_IP
-      APP_PORT: 3006
-  
-  server:
+  server_litecoin:
     image: getumbrel/umbrel-bitcoin:v0.8.0@sha256:38465d8e3744223201993950954f0644841587d741e66d200d92b68ca719e6c1
-    depends_on: [bitcoind]
+    depends_on: [litecoin]
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/app:/data # volume to persist advanced settings json
-      - ${APP_BITCOIN_DATA_DIR}:/bitcoin/.bitcoin # volume to persist umbrel-bitcoin.conf and bitcoin.conf
+      - /home/umbrel/umbrel/app-data/notrin-litecoin/data # volume to persist umbrel-bitcoin.conf and bitcoin.conf
     environment:
       PORT: "3005"
       BITCOIN_HOST: "${LITECOIN_NODE_IP}"
