@@ -6,8 +6,8 @@ services:
     container_name: litecoin
     restart: always
     ports:
-      - "9332:9332"
-      - "9333:9333"
+      - "${LITECOIN_P2P_PORT}:${LITECOIN_P2P_PORT}"
+      - "${LITECOIN_RPC_PORT}:${LITECOIN_RPC_PORT}"
     volumes:
       - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin
 
@@ -18,8 +18,8 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - RPC_IP=litecoin
-      - RPC_PORT=9332
+      - RPC_IP=${LITECOIN_IP}
+      - RPC_PORT=${LITECOIN_RPC_PORT}
   litecoin_node_dashboard:
     image: notrin7/litecoin_node_dashboard:1.2.0
     container_name: litecoin_node_dashboard
@@ -27,6 +27,6 @@ services:
     ports:
       - "10102:80"
     environment:
-      - API_IP=umbrel.local
+      - API_IP=${LITECOIN_LOCAL_IP}
     depends_on:
       - litecoin_node_rpc_flesk
