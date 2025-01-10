@@ -3,6 +3,7 @@ version: '3.7'
 services:
   server_litecoin:
     image: getumbrel/umbrel-bitcoin:v0.8.0@sha256:38465d8e3744223201993950954f0644841587d741e66d200d92b68ca719e6c1
+    container_name: server_litecoin
     depends_on: [litecoin]
     restart: on-failure
     volumes:
