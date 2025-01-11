@@ -28,7 +28,7 @@ services:
     restart: always
     init: true
     environment:
-      DAEMON_URL: "http://${LITECOIN_RPC_USER}:${LITECOIN_RPC_PASS}@${LITECOIN_LOCAL_IP}:${LITECOIN_RPC_PORT}"
+      DAEMON_URL: "http://testuser:testpass@192.168.1.33:9332"
       COIN: "Litecoin"
       # https://github.com/spesmilo/electrumx/blob/master/electrumx/lib/coins.py
       NET: mainnet
