@@ -15,10 +15,10 @@ services:
       ELECTRUM_LOCAL_SERVICE: "${DEVICE_DOMAIN_NAME}"
       ELECTRUM_HOST: "${LITECOIN_ELECTRUMX_NODE_IP}"
       ELECTRUM_RPC_PORT: "${LITECOIN_ELECTRUMX_RPC_PORT}"
-      BITCOIN_HOST: "${LITECOIN_LOCALHOST_IP}"
-      RPC_USER: "${LITECOIN_RPC_USER}"
-      RPC_PASSWORD: "${LITECOIN_RPC_PASS}"
-      RPC_PORT: "${LITECOIN_RPC_PORT}"
+      BITCOIN_HOST: "umbrel.local"
+      RPC_USER: "testuser"
+      RPC_PASSWORD: "testpass"
+      RPC_PORT: "9331"
     networks:
       default:
         ipv4_address: $LITECOIN_ELECTRUMX_IP
