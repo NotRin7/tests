@@ -1,28 +1,21 @@
 manifestVersion: 1.1
 id: notrin-litecoin-electrumx
-implements:
-  - electrs
 category: Litecoin
 name: ElectrumX LTC
-version: "1.16.0"
-tagline: A lightweight Electrum server
+icon: https://i.ibb.co/qW8YNFL/litecoin-electrumx.png
+version: "1.0.0"
+tagline: A lightweight Electrum server for Litecoin
 description: >
-  Run your personal Electrum server and connect your Electrum-compatible wallet,
-  including BitBoxApp, BlueWallet, Electrum Wallet (Android and Desktop), Nunchuk 
-  (Desktop), Phoenix, and Sparrow Wallet to it instead of using a third-party
+  Run your personal Electrum server and connect your Electrum-compatible
+  
+  wallet instead of using a third-party
+
   Electrum server.
-
-
-  Powered by ElectrumX from Thomas Voegtlin.
-
-
-  An official app from Umbrel.
 developer: Umbrel
-website: https://umbrel.com/
 dependencies:
 repo: https://github.com/getumbrel/umbrel-electrumx
-support: https://community.getumbrel.com/c/bitcoin-and-lightning
-port: 1999
+support: https://github.com/NotRin7/umbrel-community-app-store/issues
+port: 2999
 gallery:
   - 1.jpg
   - 2.jpg
@@ -30,5 +23,4 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: ""
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-apps/pull/1813
+submitter: NotRin7
