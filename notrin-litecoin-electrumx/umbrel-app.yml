@@ -20,7 +20,6 @@ description: >
 developer: Umbrel
 website: https://umbrel.com/
 dependencies:
-  - litecoin
 repo: https://github.com/getumbrel/umbrel-electrumx
 support: https://community.getumbrel.com/c/bitcoin-and-lightning
 port: 1999
