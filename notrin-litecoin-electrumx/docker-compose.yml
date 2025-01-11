@@ -18,3 +18,10 @@ services:
     networks:
       default:
         ipv4_address: $LITECOIN_ELECTRUMX_NODE_IP
+
+  litecoin_electrumx_gui:
+    image: notrin7/litecoin_electrumx_gui:1.0.0
+    container_name: litecoin_electrumx_gui
+    restart: always
+    ports:
+      - "2999:80"
