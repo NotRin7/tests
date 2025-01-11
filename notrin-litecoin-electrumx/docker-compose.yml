@@ -7,7 +7,7 @@ services:
     restart: always
     init: true
     environment:
-      DAEMON_URL: "http://testuser:testpass@192.168.1.33:9332"
+      DAEMON_URL: "http://testuser:testpass@umbrel.local:9332"
       COIN: "Litecoin"
       # https://github.com/spesmilo/electrumx/blob/master/electrumx/lib/coins.py
       NET: mainnet
