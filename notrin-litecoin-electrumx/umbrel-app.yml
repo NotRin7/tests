@@ -11,10 +11,9 @@ description: >
   wallet instead of using a third-party
 
   Electrum server.
-developer: NotRin7
+developer: Umbrel
 dependencies:
-  - litecoin
-repo: https://github.com/NotRin7/umbrel-community-app-store
+repo: https://github.com/getumbrel/umbrel-electrumx
 support: https://github.com/NotRin7/umbrel-community-app-store/issues
 port: 2999
 gallery:
