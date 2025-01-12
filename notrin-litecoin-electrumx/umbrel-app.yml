@@ -17,7 +17,9 @@ repo: https://github.com/getumbrel/umbrel-electrumx
 support: https://github.com/NotRin7/umbrel-community-app-store/issues
 port: 2999
 gallery:
-  - https://i.ibb.co/Fwf4KB1/Screenshot-2025-01-12-162846.png
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
 defaultPassword: ""
 releaseNotes: ""
