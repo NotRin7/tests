@@ -13,7 +13,7 @@ description: >
   Electrum server.
 developer: NotRin7
 dependencies:
-  - litecoin
+  - notrin-litecoin
 repo: https://github.com/NotRin7/umbrel-community-app-store
 support: https://github.com/NotRin7/umbrel-community-app-store/issues
 port: 2999
