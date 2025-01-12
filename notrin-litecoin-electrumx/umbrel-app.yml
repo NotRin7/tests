@@ -13,7 +13,7 @@ description: >
   Electrum server.
 developer: NotRin7
 dependencies:
-repo: https://github.com/getumbrel/umbrel-electrumx
+repo: https://github.com/NotRin7/umbrel-community-app-store
 support: https://github.com/NotRin7/umbrel-community-app-store/issues
 port: 2999
 gallery:
