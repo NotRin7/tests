@@ -4,7 +4,7 @@ name: Litecoin Node
 tagline: "Run a Litecoin node to validate transactions."
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
-version: "1.3.2.7"
+version: "1.3.3"
 port: 10102
 description: >-
   ⚠️If not working, update the IP address in the Docker Compose file,
@@ -33,7 +33,10 @@ support: "https://github.com/NotRin7/umbrel-community-app-store/issues"
 gallery:
   - https://i.ibb.co/T4FL3pQ/Screenshot-2025-01-08-185725.png
 releaseNotes: >
-  - Full GUI now available, providing a more accessible user experience.
+  - GUI 1.3.0 is now available.
+  - Updated user interface for a more modern look.
+  - Displays the last 100 blocks' transactions.
+  - Added auto-refresh functionality.
 dependencies: []
 path: ""
 defaultUsername: "testuser"
