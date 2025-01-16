@@ -2,7 +2,7 @@ manifestVersion: 1
 id: notrin-litecoin
 name: Litecoin Node
 tagline: "Run a Litecoin node to validate transactions."
-icon: ./home/umbrel/umbrel/app-data/notrin-litecoin/litecoin-icon.jpg
+icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
 version: "1.3.3"
 port: 10102
@@ -31,7 +31,7 @@ submission:
   repo: https://github.com/litecoin-project/docker-litecoin-core
 support: "https://github.com/NotRin7/umbrel-community-app-store/issues"
 gallery:
-  - ./home/umbrel/umbrel/app-data/notrin-litecoin/1.jpg
+  - https://i.ibb.co/T4FL3pQ/Screenshot-2025-01-08-185725.png
 releaseNotes: >
   - GUI 1.3.0 is now available.
 
