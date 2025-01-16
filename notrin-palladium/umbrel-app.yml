@@ -1,0 +1,29 @@
+manifestVersion: 1
+id: notrin-palladium
+name: Palladium Node
+tagline: "Run a Palladium node to validate transactions."
+icon: https://i.ibb.co/jrpTf3D/Palladium250.png
+category: Palladium
+version: "1.0.0"
+port: 10199
+description: >-
+  Run your Palladium node to independently store and validate every Palladium transaction with an easy-to-use graphical interface. 
+
+  The palladium.conf file is located at:
+
+  /home/umbrel/umbrel/app-data/notrin-palladium/data
+
+developer: Palladium Foundation
+website: https://palladium-coin.com
+submitter: NotRin7
+submission:
+  repo: https://github.com/NotRin7/Palladium
+support: "https://github.com/NotRin7/umbrel-community-app-store/issues"
+gallery:
+  - https://i.ibb.co/jrpTf3D/Palladium250.png
+releaseNotes: >
+  - Pre Release
+dependencies: []
+path: ""
+defaultUsername: "username"
+defaultPassword: "password"

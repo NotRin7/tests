@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export PALLADIUM_P2P_PORT=2333
+export PALLADIUM_RPC_PORT=2332
