@@ -1,4 +1,5 @@
 version: '3.7'
+services:
   palladiumd:
     image: notrin7/palladiumd_arm:1.3.0
     container_name: palladiumd
