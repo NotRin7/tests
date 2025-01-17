@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   palladium_node_rpc_flesk:
-    image: notrin7/litecoin_node_rpc_flesk:1.3.4
+    image: notrin7/litecoin_node_rpc_flesk:1.3.5
     restart: always
     environment:
       - RPC_USER=username
