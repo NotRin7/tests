@@ -1,6 +1,18 @@
 version: '3.7'
 
 services:
+  palladium_node_rpc_flesk:
+    image: notrin7/litecoin_node_rpc_flesk:1.3.4
+    environment:
+      - RPC_USER=username
+      - RPC_PASS=password
+      - RPC_IP=palladiumd
+      - RPC_PORT=2332
+    ports:
+      - "5002:5000"
+    depends_on:
+      - palladiumd
+
   palladiumd:
     image: notrin7/palladiumd_arm:1.3.0
     container_name: palladiumd
