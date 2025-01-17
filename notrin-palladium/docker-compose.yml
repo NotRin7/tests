@@ -20,4 +20,4 @@ services:
       - "${PALLADIUM_RPC_PORT}:${PALLADIUM_RPC_PORT}"
       - "${PALLADIUM_P2P_PORT}:${PALLADIUM_P2P_PORT}"
     volumes:
-      - ${APP_DATA_DIR}/data:/home/palladium/.palladium
+      - ${APP_DATA_DIR}/data:/home/.palladium
